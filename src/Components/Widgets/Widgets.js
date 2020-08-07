@@ -19,7 +19,7 @@ function Widgets() {
   }, []);
   return (
     // <div className="container">
-    <CRow>
+    <div style={{ display: "flex" }}>
       <CCol sm="4" lg="4">
         <div className="card text-white bg-primary mb-3">
           <div className="card-header">REGISTERED STUDENT</div>
@@ -51,8 +51,8 @@ function Widgets() {
           </div>
         </Link>
       </CCol>
-    </CRow>
-    // </div>
+      {/* </CRow> */}
+    </div>
   );
 }
 

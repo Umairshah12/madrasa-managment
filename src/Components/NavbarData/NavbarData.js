@@ -1,11 +1,13 @@
 import React from "react";
 import { Nav, Navbar, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-// import { logout } from "../Services/auth";
-import { withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import firebase from "../Services/firebase";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import img from "../../assets/images/madrassa-new.png";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome, faList } from "@fortawesome/free-solid-svg-icons";
 
 function NavbarData(props) {
   const logout = () => {
@@ -19,31 +21,44 @@ function NavbarData(props) {
     <div>
       <Navbar bg="light" variant="light">
         <Navbar.Brand>
-          <Link exact to="/dashboard">
+          <Link to="/dashboard">
+            <img
+              style={{ width: "40px", height: "40px" }}
+              src={img}
+              className="rounded"
+              alt="Cinque Terre"
+            />
+          </Link>
+        </Navbar.Brand>
+        &nbsp;
+        <Navbar.Brand>
+          <Link style={{ color: "black" }} to="/dashboard">
             MADRASA MANAGMENT SYSTEM
           </Link>
         </Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link>
-            <Link exact to="/registerstudent">
-              {/* <FontAwesomeIcon icon={faHome} className="mx-1" /> */}
-              Register Student
-            </Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link exact to="/studentList">
-              {/* <FontAwesomeIcon icon={faHome} className="mx-1" /> */}
-              Student List
-            </Link>
-          </Nav.Link>
+          {/* <Nav.Link> */}
+          <Link to="/registerstudent">
+            <FontAwesomeIcon icon={faHome} className="mx-1" />
+            Register Student
+          </Link>
+          &nbsp;
+          {/* </Nav.Link> */}
+          {/* <Nav.Link> */}
+          <Link to="/studentList">
+            <FontAwesomeIcon icon={faList} className="mx-1" />
+            Student List
+          </Link>
+          {/* </Nav.Link> */}
           {/* <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link> */}
         </Nav>
         {/* <Form inline> */}
         {/* <FormControl type="text" placeholder="Search" className="mr-sm-2" /> */}
-        <Button variant="outline-primary" onClick={logout}>
+        <Button variant="contained" onClick={logout} color="secondary">
           Logout
         </Button>
+        {/* <Button variant="outline-primary">Logout</Button> */}
         {/* </Form> */}
       </Navbar>
     </div>

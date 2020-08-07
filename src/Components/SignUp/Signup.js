@@ -126,7 +126,7 @@ function Signup(props) {
                 <MDBModalFooter>
                   <div className="font-weight-light">
                     <p>
-                      Not a member? <Link to="/login">Login</Link>
+                      Not a member? <Link to="/">Login</Link>
                     </p>
                   </div>
                 </MDBModalFooter>

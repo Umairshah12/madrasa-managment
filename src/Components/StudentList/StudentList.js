@@ -105,9 +105,15 @@ function StudentList() {
                                 padding: "0.75rem",
                               }}
                             >
-                              <Link to={`/updatestudent/${item.id}`}>
+                              <Link
+                                style={{ padding: "2px" }}
+                                to={`/updatestudent/${item.id}`}
+                              >
                                 <FontAwesomeIcon
-                                  style={{ marginTop: "-6px" }}
+                                  style={{
+                                    marginTop: "-6px",
+                                    margin: "0 auto",
+                                  }}
                                   icon={faEdit}
                                 />
                               </Link>
@@ -119,7 +125,10 @@ function StudentList() {
                                 onClick={() => UserDelete(item.id)}
                               />
 
-                              <Link to={`/studentdetail/${item.id}`}>
+                              <Link
+                                style={{ padding: "2px" }}
+                                to={`/studentdetail/${item.id}`}
+                              >
                                 <FontAwesomeIcon
                                   style={{ marginTop: "-6px" }}
                                   icon={faUser}

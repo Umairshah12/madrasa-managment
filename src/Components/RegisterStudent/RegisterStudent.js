@@ -75,7 +75,7 @@ function RegisterStudent(props) {
       <div className="card">
         <CCardHeader>
           <CBadge style={{ fontSize: "17px" }} className="mr-1" color="primary">
-            User Registration Form
+            USER REGISTRATION FORM
           </CBadge>
         </CCardHeader>
 

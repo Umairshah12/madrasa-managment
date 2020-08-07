@@ -4,6 +4,7 @@ import firebase from "../Services/firebase";
 
 function ProtectedRoute({ component: Comp, ...rest }) {
   let user = firebase.auth().currentUser;
+  // console.log("user", user);
   return (
     <Route
       {...rest}
