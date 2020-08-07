@@ -25,15 +25,15 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    let user = firebase.auth().currentUser;
-    console.log("user", user);
-    //if user redirect dashboard
-    if (user && user.uid) {
-      history.push("/");
-    }
-  }, [firebase]);
+  let user = firebase.auth().currentUser;
+  // useEffect(() => {
+  //   let user = firebase.auth().currentUser;
+  //   console.log("user", user);
+  //   //if user redirect dashboard
+  //   if (user && user.uid) {
+  //     history.push("/dashboard");
+  //   }
+  // }, [firebase]);
 
   let history = useHistory();
   const LoginSubmit = async (e) => {
@@ -41,6 +41,7 @@ function Login(props) {
 
     try {
       await SignIn(email, password);
+      localStorage.setItem("login", JSON.stringify(user));
       props.history.push("/dashboard");
 
       setEmail("");

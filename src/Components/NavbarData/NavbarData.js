@@ -11,6 +11,7 @@ import { faHome, faList, faUser } from "@fortawesome/free-solid-svg-icons";
 
 function NavbarData(props) {
   const logout = () => {
+    localStorage.clear();
     firebase.auth().signOut();
     props.history.push("/");
     toast("User Logout Successfully!", {
