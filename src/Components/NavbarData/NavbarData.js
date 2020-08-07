@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import img from "../../assets/images/madrassa-new.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faList } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faList, faUser } from "@fortawesome/free-solid-svg-icons";
 
 function NavbarData(props) {
   const logout = () => {
@@ -39,7 +39,7 @@ function NavbarData(props) {
         <Nav className="mr-auto">
           {/* <Nav.Link> */}
           <Link to="/registerstudent">
-            <FontAwesomeIcon icon={faHome} className="mx-1" />
+            <FontAwesomeIcon icon={faUser} className="mx-1" />
             Register Student
           </Link>
           &nbsp;
